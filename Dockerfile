@@ -22,8 +22,8 @@ COPY --from=builder /app/build/libs/*.jar ./app.jar
 COPY --from=builder /app/src/main/java/resources/ ./config/
 
 # Salud del contenedor
-HEALTHCHECK --interval=30s --timeout=3s \
-  CMD curl -f http://localhost:8080/actuator/health || exit 1
+#HEALTHCHECK --interval=30s --timeout=3s \
+#  CMD curl -f http://localhost:8080/actuator/health || exit 1
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar", "--spring.config.location=file:./config/"]
