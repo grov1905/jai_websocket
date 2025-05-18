@@ -1,0 +1,44 @@
+#jai_websocket/src/main/java/resources/application.yml
+server:
+  port: 8080
+  compression:
+    enabled: true
+  ssl:
+    enabled: false # Habilitar en producción
+
+spring:
+  profiles:
+    active: dev # o prod
+  application:
+    name: jai_websocket
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          enabled: false
+         # issuer-uri: ${JWT_ISSUER_URI}
+         # jwk-set-uri: "localhost:8080"
+         # audience: ${JWT_AUDIENCE:chatservice}
+
+jwt:
+  secret: ${JWT_SECRET:tu_clave_secreta_ultra_segura}
+  algorithm: HS256
+
+websocket:
+  endpoint: /ws/chat
+  allowed-origins: "*"
+
+grpc:
+  server:
+    port: 9090
+  client:
+    python-core:
+      address: static://chatservice:50051
+      enable-keep-alive: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    com.jaiexperts: DEBUG
+

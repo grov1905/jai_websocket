@@ -1,0 +1,26 @@
+# Para Java/Spring Boot
+echo "# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Build
+target/
+bin/
+build/
+out/
+
+# Logs
+*.log
+
+# Docker
+docker-compose.yml
+docker-compose.override.yml
+
+# Environment
+.env
+*.env
+
+# Otros
+.DS_Store" > .gitignore

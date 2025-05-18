@@ -1,0 +1,34 @@
+
+ESTRUCTURA ESENCIAL DEL PROYECTO:
+jai_websocket/
+├──  Dockerfile
+├── build.gradle
+├── settings.gradle
+├── test/
+│   ├── java/
+│   │   ├── com/
+│   │   │   ├── jaiexperts/
+│   │   │   │   ├── WebSocketIntegrationTest.java
+│   │   │   │   ├── adapter/
+│   │   │   │   │   ├── inbound/
+│   │   │   │   │   │   ├── WebSocketInterceptorTest.java
+│   │   │   │   │   │   ├── CustomWebSocketHandlerTest.java
+├── src/
+│   ├── main/
+│   │   ├── proto/
+│   │   │   ├── chat.proto
+│   │   ├── java/
+│   │   │   ├── resources/
+│   │   │   │   ├── application.yml
+│   │   │   ├── com/
+│   │   │   │   ├── jaiexperts/
+│   │   │   │   │   ├── ChatApplication.java
+│   │   │   │   │   ├── config/
+│   │   │   │   │   │   ├── GrpcClientConfig.java
+│   │   │   │   │   │   ├── WebSocketConfig.java
+│   │   │   │   │   ├── adapter/
+│   │   │   │   │   │   ├── inbound/
+│   │   │   │   │   │   │   ├── CustomWebSocketHandler.java
+│   │   │   │   │   │   │   ├── WebSocketInterceptor.java
+│   │   │   │   │   │   ├── outbound/
+│   │   │   │   │   │   │   ├── GrpcChatClient.java
