@@ -33,9 +33,8 @@ grpc:
     port: 9090
   client:
     python-core:
-      address: static://jaichatservice-production.up.railway.app:50051
+      address: ${GRPC_PYTHON_CORE_ADDRESS:static://jai_chatservice:50051}
       enable-keep-alive: true
-
 logging:
   level:
     root: INFO
